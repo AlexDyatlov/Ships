@@ -68,8 +68,13 @@ const scripts = () => {
   return src(
     ['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js'])
     .pipe(gulpif(!isProd, sourcemaps.init()))
-		.pipe(babel({
-			presets: ['@babel/env']
+		.pipe(babel({ 
+      presets: [
+        ['@babel/env', {
+        "targets": {
+          "browsers": ["last 2 Chrome versions"]
+        }}]
+      ]
 		}))
     .pipe(concat('main.js'))
     .pipe(gulpif(isProd, uglify().on("error", notify.onError())))

@@ -10,8 +10,13 @@ html {
 
 body {
   margin: 0;
-  font-family: "asd", sans-serif;
-  background-color: var(--color-white);
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 400;
+  background-image: url("../img/bg-ships.jpg");
+  background-repeat: repeat-y;
+  background-color: #102031;
 }
 
 img {
@@ -44,14 +49,20 @@ ul {
 button {
   border: none;
   padding: 0;
-  background-color: transparent;
   cursor: pointer;
+}
+
+.btn {
+  color: #fff;
+  letter-spacing: 0.32px;
+  padding: 13px 28px;
+  background-image: linear-gradient(to top, #e12e00 0, #fd6200 100%);
 }
 
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1200px;
+  max-width: 1230px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
